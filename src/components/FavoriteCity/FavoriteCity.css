@@ -1,0 +1,4 @@
+.FavoriteCity {
+  display: flex;
+  justify-content: space-between;
+}

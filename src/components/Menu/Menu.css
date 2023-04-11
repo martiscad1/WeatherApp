@@ -1,0 +1,172 @@
+.Menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--bgc-secondary);
+  color: var(--color-primary);
+  width: 100%;
+  /* height: 100vh; */
+  z-index: 6;
+  transform: translateX(-100%);
+  padding: 6rem 1rem 1rem;
+  transition: transform 350ms ease;
+  border-right: 1px solid var(--color-primary);
+}
+
+@media screen and (min-width: 900px) {
+  .Menu {
+    min-width: 25rem;
+    width: 30vw;
+  }
+}
+
+.MenuButton {
+  padding: 0.5em;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.MenuButtonInner {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5em;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.MenuIcon {
+  height: clamp(1.4rem, 1vw + 8px, 2vw);
+  width: clamp(1.4rem, 1vw + 8px, 2vw);
+}
+
+.MenuDeleteButton {
+  margin-left: auto;
+  background-color: transparent;
+  color: white;
+  padding: 0.5em;
+}
+.MenuDeleteButton:hover {
+  cursor: pointer;
+}
+
+.MenuPinButton {
+  margin-right: 1rem;
+  background-color: transparent;
+  padding: 0.3em 1.2em;
+  border-radius: 4px;
+  color: #fff;
+}
+.MenuPinButton:hover {
+  cursor: pointer;
+  color: green;
+}
+.MenuPinButton svg {
+  fill: #fff;
+}
+.MenuFavoriteCity {
+  flex-grow: 1;
+  transition: transform 100ms ease;
+}
+.MenuFavoriteCity:hover {
+  cursor: pointer;
+}
+
+.MenuItem {
+  font-size: clamp(1.2rem, 4vw + 2px, 2.4rem);
+  background-color: inherit;
+  color: #fff;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.MenuSeparator {
+  border-bottom: 1px dashed var(--color-primary);
+}
+
+.FavoriteLocations {
+  margin-top: 1rem;
+}
+
+.FavoriteLocations::-webkit-scrollbar-thumb {
+  background-color: var(--bgc-ternary);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.FavoriteLocations::-webkit-scrollbar {
+  background-color: var(--bgc-primary);
+  color: var(--bgc-primary);
+  width: 5px;
+  height: 5px;
+  position: relative;
+  right: 1rem;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.FavoriteLocations::-webkit-scrollbar-track {
+  background-color: var(--color-primary);
+  color: var(--color-primary);
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: var(--bs-inner);
+}
+
+.MenuBar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bgc-secondary);
+  color: #fff;
+  z-index: 3;
+  min-height: 2rem;
+  text-align: end;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 500px) {
+  .MenuBar {
+    justify-content: center;
+  }
+}
+
+.Menu.Open {
+  transform: translateX(0%);
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.Menu.Open::-webkit-scrollbar-thumb {
+  background-color: var(--bgc-ternary);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Menu.Open::-webkit-scrollbar {
+  background-color: var(--bgc-primary);
+  color: var(--bgc-primary);
+  width: 5px;
+  height: 5px;
+  position: relative;
+  right: 1rem;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.Menu.Open::-webkit-scrollbar-track {
+  background-color: var(--color-primary);
+  color: var(--color-primary);
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: var(--bs-inner);
+}

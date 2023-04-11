@@ -1,0 +1,15 @@
+.Footer {
+  min-height: 20vh;
+  background-color: var(--bgc-secondary);
+  color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.Footer > a {
+  color: var(--color-primary);
+}

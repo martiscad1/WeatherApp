@@ -1,0 +1,77 @@
+.HourlyForecastWrapper {
+  display: flex;
+  gap: 3rem;
+  padding: 1rem 0;
+  /* overflow: hidden; */
+}
+.HourlyForecastContent {
+  overflow: auto;
+  height: 100%;
+}
+
+.HourlyForecastSection {
+  border-radius: 1rem;
+  box-shadow: var(--bs-inner);
+  flex-grow: 1;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-primary);
+  padding: 0.5rem;
+}
+
+.HourlyForecastContent::-webkit-scrollbar-thumb {
+  background-color: var(--bgc-secondary);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.HourlyForecastContent::-webkit-scrollbar {
+  background-color: var(--bgc-primary);
+  color: var(--bgc-primary);
+  width: 5px;
+  height: 5px;
+  position: relative;
+  right: 1rem;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.HourlyForecastContent::-webkit-scrollbar-track {
+  background-color: var(--color-primary);
+  color: var(--color-primary);
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: var(--bs-inner);
+}
+
+.HourlyForecast {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0.5rem;
+}
+
+.HourlyForecastIcon {
+  height: clamp(4rem, 3vw + 4px, 8vw);
+  width: clamp(4rem, 3vw + 4px, 8vw);
+  place-self: center;
+}
+
+.Hour {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  overflow-y: auto;
+}
+
+@media screen and (min-width: 769px) {
+  .HourlyForecast {
+    grid-template-columns: repeat(4, 1fr);
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .HourlyForecastWrapper {
+    display: block;
+    gap: 3rem;
+    overflow-y: auto;
+  }
+}

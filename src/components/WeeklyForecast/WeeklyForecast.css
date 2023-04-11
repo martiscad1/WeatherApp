@@ -1,0 +1,44 @@
+.WeekDay {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.WeekContainer {
+  background-color: var(--bgc-primary);
+  box-shadow: var(--bs-inner);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: var(--color-primary);
+  margin: 0 1rem;
+  display: block;
+}
+
+.GridContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  max-width: 600px;
+  margin: 0 1rem;
+  gap: 1rem;
+  place-self: center;
+}
+
+@media screen and (min-width: 769px) {
+  .WeekContainer {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .GridContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.WeeklyForecastIcon {
+  min-height: 3rem;
+  min-width: 3rem;
+  max-height: 6vw;
+  max-width: 6vw;
+  place-self: center;
+}
